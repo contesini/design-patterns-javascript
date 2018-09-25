@@ -1,33 +1,75 @@
 <html>
 
-<body style="text-align: center">
-
-    <div>
-        <p>Meows: <a id="clicks">0</a></p>
-    </div>
-
-    <div>
-        <img id="my-elem" src="assets/images/625069434_db86b67df8_z.jpg" alt="Photo of a little kitten">
-    </div>
+<body>
 
 </body>
 
 <script>
-    var elem = document.getElementById('my-elem');
-    var clicks = 0;
+    const cats = [
+        {
+            name: "Garfield",
+            soundPath: "assets/sounds/cat1/Cat-sound-effect.mp3",
+            imgPath: "assets/images/cat1/625069434_db86b67df8_z.jpg"
+        },
+        {
+            name: "Tom",
+            soundPath: "assets/sounds/cat2/Meowing-cat.mp3",
+            imgPath: "assets/images/cat2/2290467335_89067c7b51_z .jpg"
+        }
+    ];
 
-    function meow() {
-        var meow = new Audio();
-        meow.src = "assets/sounds/Cat-sound-effect.mp3";
-        meow.play();
+    (function () {
+        var body = document.getElementsByTagName("body")[0];
+        cats.forEach(cat => {
+            divName(body, cat)
+            divPhoto(body, cat)
+        })
+    })()
+
+    function divName(body, cat) {
+        const div = document.createElement("div");
+        const p = document.createElement('p');
+        p.innerHTML = cat.name + ' meows: ';
+        const a = document.createElement('a')
+        a.id = cat.name;
+        a.innerHTML = 0;
+        p.appendChild(a)
+        div.appendChild(p)
+        body.appendChild(div)
     }
 
-    elem.addEventListener('click', function () {
-        clicks += 1;
-        document.getElementById("clicks").innerHTML = clicks;
-        // little kittie react to the click
-        meow();
-    }, false);
+    function divPhoto(body, cat) {
+        const div = document.createElement("div");
+        const img = document.createElement('img');
+        img.src = cat.imgPath;
+        img.id = cat.name + 'Img';
+        div.appendChild(img)
+        body.appendChild(div)
+    }
+
+
+    function meow(cat) {
+        var clicks = document.getElementById(cat.name).innerHTML
+        document.getElementById(cat.name).innerHTML = ++clicks;
+
+    }
+
+    function addEventListener(cat) {
+        var elem = document.getElementById(cat.name + 'Img');
+        var clicks = Number(document.getElementById(cat.name).innerHTML);
+        elem.addEventListener('click', function () {
+            clicks += 1;
+            document.getElementById(cat.name).innerHTML = clicks;
+            var meow = new Audio();
+            meow.src = cat.soundPath;
+            meow.play();
+        }, false);
+    }
+
+    cats.forEach(cat => {
+        addEventListener(cat)
+    })
+
 
 </script>
 
