@@ -3,11 +3,11 @@
 <body style="text-align: center">
 
     <div>
-        <p>Clicks: <a id="clicks">0</a></p>
+        <p>Meows: <a id="clicks">0</a></p>
     </div>
 
     <div>
-        <img id="my-elem" src="assets/625069434_db86b67df8_z.jpg" alt="Photo of a little kitten">
+        <img id="my-elem" src="assets/images/625069434_db86b67df8_z.jpg" alt="Photo of a little kitten">
     </div>
 
 </body>
@@ -15,11 +15,18 @@
 <script>
     var elem = document.getElementById('my-elem');
     var clicks = 0;
+
+    function meow() {
+        var meow = new Audio();
+        meow.src = "assets/sounds/Cat-sound-effect.mp3";
+        meow.play();
+    }
+
     elem.addEventListener('click', function () {
         clicks += 1;
         document.getElementById("clicks").innerHTML = clicks;
-        // little kittie react to click
-        console.log("meow \n".repeat(clicks))
+        // little kittie react to the click
+        meow();
     }, false);
 
 </script>
