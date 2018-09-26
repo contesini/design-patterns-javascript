@@ -1,26 +1,128 @@
 <html>
 
-<body style="text-align: center">
+<head>
+    <style>
+        .row {
+            display: flex;
+        }
 
-    <div>
-        <p>Meows: <a id="clicks">0</a></p>
-    </div>
+        .column {
+            flex: 50%;
+        }
+    </style>
+</head>
 
-    <div>
-        <img id="my-elem" src="assets/625069434_db86b67df8_z.jpg" alt="Photo of a little kitten">
+<body>
+
+    <div class="row">
+
+        <div id="selectedCat" class="column">
+
+        </div>
+
+        <div class="column">
+            <ol>
+            </ol>
+        </div>
+
     </div>
 
 </body>
 
 <script>
-    var elem = document.getElementById('my-elem');
-    var clicks = 0;
-    elem.addEventListener('click', function () {
-        clicks += 1;
-        document.getElementById("clicks").innerHTML = clicks;
-        // little kittie react to click
-        console.log("meow \n".repeat(clicks))
-    }, false);
+    const cats = [
+        {
+            name: "Garfield",
+            soundPath: "assets/sounds/cat1/Cat-sound-effect.mp3",
+            imgPath: "assets/images/cat1/625069434_db86b67df8_z.jpg",
+            clicks: 0
+        },
+        {
+            name: "Tom",
+            soundPath: "assets/sounds/cat2/Meowing-cat.mp3",
+            imgPath: "assets/images/cat2/2290467335_89067c7b51_z .jpg",
+            clicks: 0
+        },
+        {
+            name: "Tom1",
+            soundPath: "assets/sounds/cat2/Meowing-cat.mp3",
+            imgPath: "assets/images/cat3/5828169497_0102d6cd9c_z .jpg",
+            clicks: 0
+        },
+        {
+            name: "Tom2",
+            soundPath: "assets/sounds/cat2/Meowing-cat.mp3",
+            imgPath: "assets/images/cat4/9627287257_e82fdd3e72_z.jpg",
+            clicks: 0
+        },
+        {
+            name: "Tom3",
+            soundPath: "assets/sounds/cat2/Meowing-cat.mp3",
+            imgPath: "assets/images/cat5/3802827091_3107f25b42_z.jpg",
+            clicks: 0
+        }
+    ];
+
+    (function () {
+        let body = document.getElementsByTagName("body")[0];
+        cats.forEach(cat => {
+            createCatList(cat)
+        })
+    })()
+
+    function createCatList(cat) {
+        const li = document.createElement('li')
+        li.id = cat.name
+        li.innerHTML = cat.name
+        li.addEventListener('click', function () {
+            const selectedCat = document.getElementById('selectedCat')
+            if (selectedCat.childNodes.length >= 3) {
+                selectedCat.removeChild(selectedCat.childNodes[1])
+                selectedCat.removeChild(selectedCat.childNodes[1])
+            }
+            divName(selectedCat, cat)
+            divPhoto(selectedCat, cat)
+            addEventListener(cat)
+        })
+        document.getElementsByTagName('ol')[0].appendChild(li)
+    }
+
+    function divName(body, cat) {
+        const div = document.createElement("div");
+        const p = document.createElement('p');
+        p.innerHTML = cat.name + ' meows: ';
+        const a = document.createElement('a');
+        a.id = cat.name;
+        a.innerHTML = String(cat.clicks);
+        p.appendChild(a)
+        div.appendChild(p)
+        body.appendChild(div)
+    }
+
+    function divPhoto(body, cat) {
+        const div = document.createElement("div");
+        const img = document.createElement('img');
+        img.src = cat.imgPath;
+        img.id = cat.name + 'Img';
+        div.appendChild(img)
+        body.appendChild(div)
+    }
+
+
+    function addEventListener(cat) {
+        let elem = document.getElementById(cat.name + 'Img');
+        let clicks = Number(document.getElementById(cat.name).innerHTML);
+        elem.addEventListener('click', function () {
+            clicks += 1;
+            cats.find(catFilter => catFilter.name == cat.name).clicks = clicks;
+            document.getElementById(cat.name).innerHTML = clicks
+            let meow = new Audio();
+            meow.src = cat.soundPath;
+            meow.play();
+        }, false);
+    }
+
+
 
 </script>
 
