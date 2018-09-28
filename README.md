@@ -15,7 +15,7 @@ Repositorio feito para colocar codigos do curso de [JavaScript Design Patterns](
 
 Agradeço ao [poplinre](https://www.flickr.com/photos/poplinre/625069434/in/photostream/) pela foto.
 
-* [Aula 003 - Branch](https://github.com/contesini/design-patterns-javascript/tree/Aula-003---Cat-click)
+* [Aula 003 - Code](https://github.com/contesini/design-patterns-javascript/blob/Aula-003---Cat-click/code/index.html)
 * [Aula 003 - Page](https://design-patterns-003.firebaseapp.com/)
 
 
@@ -34,8 +34,8 @@ Agradeço ao [poplinre](https://www.flickr.com/photos/poplinre/625069434/in/phot
 
 Agradeço ao [chewie](https://www.flickr.com/photos/chewie/2290467335) pela foto.
 
-* [Aula 008 - Branch](https://github.com/contesini/design-patterns-javascript/tree/Aula-008---Cat-click)
-* [Aula 008 - Page]()
+* [Aula 008 - Code](https://github.com/contesini/design-patterns-javascript/blob/Aula-008---Cat-click/code/index.html)
+* [Aula 008 - Page](https://design-patterns-008.firebaseapp.com/)
 
 
 # Aula 008 - Requisitos do projeto para o Cat Clicker Premium
@@ -57,5 +57,5 @@ Agradeço ao [chewie](https://www.flickr.com/photos/chewie/2290467335) pela foto
 ![Image of cat-03](https://lh5.ggpht.com/LfjkdmOKkGLvCt-VuRlWGjAjXqTBrPjRsokTNKBtCh8IFPRetGaXIpTQGE2e7ZCUaG2azKNkz38KkbM_emA=s0#w=640&h=454)
 
 Agradeço ao [jetske](https://www.flickr.com/photos/jetske/5828169497) pela foto.
-* [Aula 013 - CODE](https://github.com/contesini/design-patterns-javascript/blob/Aula-013---Cat-click-premium/index.html)
+* [Aula 013 - Code](https://github.com/contesini/design-patterns-javascript/blob/Aula-013---Cat-click-premium/index.html)
 * [Aula 013 - Page](https://design-patterns-013.firebaseapp.com/)
