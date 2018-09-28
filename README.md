@@ -12,6 +12,7 @@ Repositorio feito para colocar codigos do curso de [JavaScript Design Patterns](
 * O número de cliques deve ser incrementado quando a foto de gato é clicada.
 ### Inspiração ###
 ![Image of cat-01](https://lh3.ggpht.com/nlI91wYNCrjjNy5f-S3CmVehIBM4cprx-JFWOztLk7vFlhYuFR6YnxcT446AvxYg4Ab7M1Fy0twaOCWYcUk=s0#w=640&h=426)
+
 Agradeço ao poplinre pela foto.
 
 * [Aula 003 - Branch](https://github.com/contesini/design-patterns-javascript/tree/Aula-003---Cat-click)
@@ -30,6 +31,7 @@ Agradeço ao poplinre pela foto.
 
 ### Inspiração ###
 ![Image of cat-02](https://lh3.ggpht.com/kixazxoJ2ufl3ACj2I85Xsy-Rfog97BM75ZiLaX02KgeYramAEqlEHqPC3rKqdQj4C1VFnXXryadFs1J9A=s0#w=640&h=496)
+
 Agradeço ao chewie pela foto.
 
 * [Aula 008 - Branch](https://github.com/contesini/design-patterns-javascript/tree/Aula-008---Cat-click)
@@ -53,6 +55,7 @@ Agradeço ao chewie pela foto.
 
 ### Inspiração ###
 ![Image of cat-03](https://lh5.ggpht.com/LfjkdmOKkGLvCt-VuRlWGjAjXqTBrPjRsokTNKBtCh8IFPRetGaXIpTQGE2e7ZCUaG2azKNkz38KkbM_emA=s0#w=640&h=454)
+
 Agradeço ao jetske pela foto.
 * [Aula 013 - CODE](https://github.com/contesini/design-patterns-javascript/blob/Aula-013---Cat-click-premium/index.html)
 * [Aula 013 - Page](https://design-patterns-013.firebaseapp.com/)
